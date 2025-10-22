@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AI Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🎭 AI Emotion Detector</h1>
+            <nav>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link active">About</a>
+                <a href="https://github.com/devansh-tg/emojify--copy-" target="_blank" class="nav-link">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="about-section">
+                <h2 class="page-title">About This Project</h2>
+                
+                <div class="card about-card">
+                    <h3>🎯 Project Overview</h3>
+                    <p>This is an AI-powered real-time emotion detection system that uses Deep Learning to classify facial expressions into 7 different emotions: Angry, Disgust, Fear, Happy, Neutral, Sad, and Surprise.</p>
+                </div>
+
+                <div class="card about-card">
+                    <h3>🧠 Technology Stack</h3>
+                    <ul class="tech-list">
+                        <li><strong>Backend:</strong> Flask (Python Web Framework)</li>
+                        <li><strong>Deep Learning:</strong> TensorFlow / Keras</li>
+                        <li><strong>Computer Vision:</strong> OpenCV</li>
+                        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                        <li><strong>Model:</strong> Convolutional Neural Network (CNN)</li>
+                    </ul>
+                </div>
+
+                <div class="card about-card">
+                    <h3>📊 Model Architecture</h3>
+                    <ul class="tech-list">
+                        <li><strong>Input:</strong> 48x48 grayscale images</li>
+                        <li><strong>Architecture:</strong> 3 Convolutional blocks with BatchNormalization</li>
+                        <li><strong>Parameters:</strong> ~2 million trainable parameters</li>
+                        <li><strong>Training:</strong> 100 epochs with early stopping</li>
+                        <li><strong>Platform:</strong> Kaggle GPU (T4 x2)</li>
+                        <li><strong>Dataset:</strong> 35,000+ facial expression images</li>
+                        <li><strong>Accuracy:</strong> 63.35% (Good for 7-class classification)</li>
+                    </ul>
+                </div>
+
+                <div class="card about-card">
+                    <h3>✨ Features</h3>
+                    <ul class="tech-list">
+                        <li>Real-time emotion detection from webcam</li>
+                        <li>Live probability distribution for all emotions</li>
+                        <li>Performance metrics (inference time, FPS)</li>
+                        <li>Emotion history tracking</li>
+                        <li>Responsive web interface</li>
+                        <li>REST API for integration</li>
+                    </ul>
+                </div>
+
+                <div class="card about-card">
+                    <h3>🚀 How It Works</h3>
+                    <ol class="tech-list">
+                        <li>Camera captures real-time video feed</li>
+                        <li>Haar Cascade detects faces in each frame</li>
+                        <li>Face region is extracted and preprocessed (48x48 grayscale)</li>
+                        <li>CNN model predicts emotion probabilities</li>
+                        <li>Results are displayed with confidence scores</li>
+                        <li>System updates statistics and history</li>
+                    </ol>
+                </div>
+
+                <div class="card about-card">
+                    <h3>📈 Performance</h3>
+                    <ul class="tech-list">
+                        <li><strong>Inference Speed:</strong> 20-30ms per prediction</li>
+                        <li><strong>Real-time FPS:</strong> 25-35 frames per second</li>
+                        <li><strong>Model Size:</strong> ~8 MB</li>
+                        <li><strong>Accuracy:</strong> 63.35% (7-class classification)</li>
+                    </ul>
+                </div>
+
+                <div class="card about-card">
+                    <h3>👨‍💻 Developer</h3>
+                    <p>Built by <strong>Devansh Tyagi</strong></p>
+                    <p>GitHub: <a href="https://github.com/devansh-tg" target="_blank">@devansh-tg</a></p>
+                    <p>Repository: <a href="https://github.com/devansh-tg/emojify--copy-" target="_blank">emojify--copy-</a></p>
+                </div>
+
+                <div class="back-button-container">
+                    <a href="/" class="back-button">← Back to Detection</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 AI Emotion Detection System | Built with TensorFlow & Flask</p>
+        </div>
+    </footer>
+</body>
+</html>
