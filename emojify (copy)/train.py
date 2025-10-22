@@ -10,8 +10,17 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 train_dir = 'data/train'
 val_dir   = 'data/test'
 
-# generators with rescaling
-train_gen = ImageDataGenerator(rescale=1./255)
+# generators with data augmentation for better accuracy
+train_gen = ImageDataGenerator(
+    rescale=1./255,
+    rotation_range=20,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    horizontal_flip=True,
+    zoom_range=0.2,
+    shear_range=0.2,
+    fill_mode='nearest'
+)
 val_gen   = ImageDataGenerator(rescale=1./255)
 
 batch_size = 64
@@ -53,7 +62,7 @@ model.compile(
 # model training (50 epochs for better accuracy)
 history = model.fit(
     train_loader,
-    epochs=5,
+    epochs=50,
     validation_data=val_loader
 )
 
