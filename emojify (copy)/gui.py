@@ -2,33 +2,10 @@
 import tkinter as tk
 from PIL import Image, ImageTk
 import cv2, numpy as np
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dropout, Flatten, Dense
+from tensorflow.keras.models import load_model
 
-# build same CNN model
-def build_model():
-    m = Sequential([
-        Conv2D(32,(3,3),activation='relu',input_shape=(48,48,1)),
-        Conv2D(64,(3,3),activation='relu'),
-        MaxPooling2D((2,2)),
-        Dropout(0.25),
-
-        Conv2D(128,(3,3),activation='relu'),
-        MaxPooling2D((2,2)),
-        Conv2D(128,(3,3),activation='relu'),
-        MaxPooling2D((2,2)),
-        Dropout(0.25),
-
-        Flatten(),
-        Dense(1024,activation='relu'),
-        Dropout(0.5),
-        Dense(7,activation='softmax')
-    ])
-    return m
-
-# load model
-model = build_model()
-model.load_weights('model.h5')
+# Load the improved model directly
+model = load_model('model.h5')
 
 labels = ['Angry','Disgust','Fear','Happy','Neutral','Sad','Surprise']
 emoji_map = {
